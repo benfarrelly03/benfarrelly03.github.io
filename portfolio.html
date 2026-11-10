@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio · Benjamin Farrelly</title>
+<meta name="description" content="Portfolio of Benjamin Farrelly: Twinship from research to final looks, with PDF downloads.">
+<meta property="og:title" content="Portfolio · Benjamin Farrelly">
+<meta property="og:description" content="Portfolio of Benjamin Farrelly: Twinship from research to final looks, with PDF downloads.">
+<meta property="og:image" content="images/2069056c287a03d1d4f18a05f8abafce.jpg">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400&amp;family=Doto:wght@700..900&amp;display=swap">
+<style>
+:root{--hover:#C8262E;--bg:#FAF7EF;--surface:#FEFCF7;--ink:#2E2E2C;--mute:#66645E;--rule:#E3DDD1;--grid:#EEE9DE;--band:#F2EBDB;--accent:#2B4A9B;--soft:#D5CEC0;--back:#DFE4EE;--backline:#D0D7E6;--display:'Geist',sans-serif;--body:'Geist',sans-serif;--mono:'Geist Mono',monospace;--dw:500;--dls:-0.025em}
+html{background:var(--bg)}
+
+body{margin:0}
+.site a{color:var(--ink);text-decoration:none}
+.site a:hover{color:var(--accent)}
+.site a:focus-visible,.site button:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:11.5px;color:var(--mute);letter-spacing:.01em}
+.disp{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls)}
+.nav a,.nav button{position:relative;padding:6px 0;background:none;border:0;font:inherit;color:var(--ink);cursor:pointer}
+.nav a::after,.nav button::after{content:"";position:absolute;left:0;right:0;bottom:2px;border-bottom:1px dashed var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav a:hover::after,.nav button:hover::after{transform:scaleX(1)}
+.nav a[aria-current="page"]::after{transform:scaleX(1);border-bottom-style:solid}
+.ruler{height:8px;background-image:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 14px),repeating-linear-gradient(90deg,var(--mute) 0 1px,transparent 1px 140px);background-size:100% 4px,100% 8px;background-repeat:no-repeat;background-position:0 100%,0 100%;opacity:.7}
+.hem{position:fixed;left:0;right:0;bottom:0;z-index:30;height:40px;background:var(--surface);border-top:1px solid var(--rule);overflow:hidden;transition:height .5s cubic-bezier(.65,0,.25,1)}
+.hem::before{content:"";position:absolute;left:0;right:0;top:11px;height:1.5px;background-image:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 24px);opacity:.85;pointer-events:none}
+.hem.open{height:124px}
+.hem{height:48px}.hem.open{height:132px}
+.hemrow{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hemtab{border:0;background:none;padding:4px 0;font-family:var(--mono);font-size:11.5px;color:var(--ink);cursor:pointer}
+.hemtab:hover{color:var(--hover,var(--accent))}
+.hemmail{font-family:var(--mono);font-size:11.5px}
+.hemgrid{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
+.hem.open .hemgrid{visibility:visible;transition:visibility 0s}
+.hem .k{display:block;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+.ghost{border:1px solid var(--rule);background:none;color:var(--ink);font-family:var(--mono);font-size:11.5px;min-height:36px;padding:0 12px;cursor:pointer}
+.ghost:hover{border-color:var(--ink)}
+.dl{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:1px solid var(--ink);font-size:13px}
+.dl:hover{border-color:var(--accent)}
+.arrow{border:0;background:none;padding:12px;cursor:pointer;color:var(--ink);display:flex}
+.arrow:hover{color:var(--accent)}
+.thumb{border:0;padding:0;background:var(--surface);cursor:pointer;opacity:.5;transition:opacity .25s ease;box-shadow:0 0 0 1px var(--rule)}
+.thumb:hover{opacity:1}
+.thumb[aria-current="true"]{opacity:1;box-shadow:0 0 0 1px var(--ink)}
+@media (max-width:820px){.head,.pgrid{grid-template-columns:minmax(0,1fr)!important}.thumbs{grid-template-columns:repeat(6,minmax(0,1fr))!important}}
+.site a:hover,.ribtab:hover,.arrow:hover{color:var(--hover,var(--accent))}
+.nav a::after,.nav button::after{border-bottom-color:var(--hover,var(--accent))}
+.nav a[aria-current="page"]::after,.nav a[aria-current="true"]::after,.nav button[aria-pressed="true"]::after{border-bottom-color:var(--accent)}
+.num,.site header a.disp{font-family:'Doto',monospace;font-weight:900;letter-spacing:0}
+.site.grid-wide{background-size:28px 20px}
+.site.grid-large{background-size:42px 30px}
+.site.grid-swatch{background-size:70px 50px}
+.site.grid-dots{background-image:radial-gradient(circle,var(--rule) 1px,transparent 1.6px);background-size:28px 20px;background-position:-14px -10px}
+.site.grid-off{background-image:none}
+.site{font-size:15.5px}
+.mono,.hemtab,.hemmail,.ghost{font-size:13px}
+.hem .k{font-size:11.5px}
+.nav{font-size:15.5px!important}
+.subnav,.filters{font-size:14.5px!important}
+.dl{font-size:14.5px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+</style>
+</head>
+<body>
+<div class="site grid-swatch">
+
+<header style="position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 0 clamp(16px, 4vw, 48px);">
+<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
+<a href="index.html" class="disp" style="font-size: clamp(19px, 1.9vw, 23px); line-height: 1.1;">Benjamin Farrelly</a>
+<nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px;">
+<a href="twinship.html">Projects</a>
+<a href="samples.html">Knit samples</a>
+<a href="portfolio.html" aria-current="page">Portfolio</a>
+<a href="cv.html">CV</a>
+<button type="button" data-contact-toggle aria-expanded="false">Contact</button>
+</nav>
+</div>
+<div class="ruler" style="max-width: 1440px; margin: 0 auto;"></div>
+</header>
+
+<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
+<section aria-labelledby="p-h" class="head" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px 64px; padding: clamp(40px, 8vh, 80px) 0 32px; align-items: end;">
+<h1 id="p-h" class="disp" style="margin: 0; font-size: clamp(42px, 5vw, 72px); line-height: 1;">Portfolio</h1>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px;">
+<p style="margin: 0; max-width: 44ch;">Twinship from research to final looks, in 22 pages. The same pages, in the same order, as the PDF. The 48-page lookbook is here too.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<a class="dl" href="files/Benjamin-Farrelly-Portfolio.pdf" download="Benjamin-Farrelly-Portfolio.pdf">Portfolio PDF · 13 MB<svg width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M6 1v10M1.5 6.5L6 11l4.5-4.5M1 13h10"/></svg></a>
+<a class="dl" href="files/Benjamin-Farrelly-Twinship-Lookbook.pdf" download="Benjamin-Farrelly-Twinship-Lookbook.pdf">Lookbook PDF · 11 MB<svg width="12" height="14" viewBox="0 0 12 14" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M6 1v10M1.5 6.5L6 11l4.5-4.5M1 13h10"/></svg></a>
+</div>
+</div>
+</section>
+
+<section aria-label="Page viewer">
+<figure style="margin: 0; background: var(--surface); box-shadow: 0 0 0 1px var(--rule);">
+<img id="pf-img" src="images/3322a75600a8dda3e8f27797e21e5e40.jpg" alt="Portfolio page 1 of 22" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: contain;">
+</figure>
+<div class="mono" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 10px 0 0; font-variant-numeric: tabular-nums;">
+<button class="arrow" type="button" id="pf-prev" aria-label="Previous page" style="margin-left: -12px;"><svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M21 6H1M6 1L1 6l5 5"/></svg></button>
+<span>Page <span class="num" id="pf-count" style="font-size: 16px; color: var(--ink);">1 / 22</span></span>
+<button class="arrow" type="button" id="pf-next" aria-label="Next page" style="margin-right: -12px;"><svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M1 6h20M16 1l5 5-5 5"/></svg></button>
+</div>
+</section>
+<div class="thumbs" style="display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 8px; padding: 20px 0 0;">
+<button class="thumb" type="button" data-page="0" aria-label="Go to page 1" aria-current="true"><img src="images/3322a75600a8dda3e8f27797e21e5e40.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="1" aria-label="Go to page 2" aria-current="false"><img src="images/19febc992c02682952b95d96fc05ff76.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="2" aria-label="Go to page 3" aria-current="false"><img src="images/146e7fa64ac6425b6838a6b9a264660d.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="3" aria-label="Go to page 4" aria-current="false"><img src="images/c8cd703e1cc2ba76e9b30804922c2f6d.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="4" aria-label="Go to page 5" aria-current="false"><img src="images/c6a0cf602271c4c2d8f052f18c7623c2.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="5" aria-label="Go to page 6" aria-current="false"><img src="images/d4c6a6d94620bee95203c7cebc7c358c.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="6" aria-label="Go to page 7" aria-current="false"><img src="images/86cd4f13d2e9266d7c6b1c200fa2dc68.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="7" aria-label="Go to page 8" aria-current="false"><img src="images/7d9de9d8a2268060dcb8b909d0f2d434.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="8" aria-label="Go to page 9" aria-current="false"><img src="images/136a9cf0afbb7aae26b2be66acf28714.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="9" aria-label="Go to page 10" aria-current="false"><img src="images/1cbc3f13f00bef9ef6d1470fe706afd4.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="10" aria-label="Go to page 11" aria-current="false"><img src="images/3afdfea7043d2a594257fc1daf23d68a.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="11" aria-label="Go to page 12" aria-current="false"><img src="images/451e4bfc8dccca5a53cf623512a87488.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="12" aria-label="Go to page 13" aria-current="false"><img src="images/9db07606ef51aee33fc45a68f2397fa9.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="13" aria-label="Go to page 14" aria-current="false"><img src="images/ca21b27568c534e4f964d4a750d23daa.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="14" aria-label="Go to page 15" aria-current="false"><img src="images/84167c733eaccae5ea7398664a6dc348.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="15" aria-label="Go to page 16" aria-current="false"><img src="images/fc9ad18ab84d7cab0e9538a166ce01b0.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="16" aria-label="Go to page 17" aria-current="false"><img src="images/9689bfd9d67f8498bcbf7ec70e5ee7e4.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="17" aria-label="Go to page 18" aria-current="false"><img src="images/bfaec5c30d63df157088c07223a50602.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="18" aria-label="Go to page 19" aria-current="false"><img src="images/54c5fb289c2cd884d6442ed5aa4dd099.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="19" aria-label="Go to page 20" aria-current="false"><img src="images/4e16d1d86807bb46f47f0b69118160af.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="20" aria-label="Go to page 21" aria-current="false"><img src="images/70d2d0229f9f052a5822fb3bcefbb8ac.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+<button class="thumb" type="button" data-page="21" aria-label="Go to page 22" aria-current="false"><img src="images/a44506925c86e46e2e7b01f1d6c04150.jpg" alt="" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1654 / 1170; object-fit: cover;"></button>
+</div>
+</main>
+
+<div aria-hidden="true" style="height: clamp(64px, 12vh, 128px);"></div>
+
+<div class="hem" role="region" aria-label="Contact">
+<div class="hemrow"><button class="hemtab" type="button" data-contact-toggle aria-expanded="false">Contact ↑</button><a class="hemmail" href="mailto:benfarrelly03@gmail.com">benfarrelly03@gmail.com</a></div>
+<div class="hemgrid"><span><span class="k">Phone</span><a href="tel:+353858715077">+353 85 871 5077</a></span><span><span class="k">Instagram</span><a href="https://www.instagram.com/benjfarrelly/">@benjfarrelly</a></span></div>
+</div>
+</div>
+<script src="js/site.js"></script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>

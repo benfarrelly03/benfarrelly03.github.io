@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twinship · Benjamin Farrelly</title>
+<meta name="description" content="Twinship, a graduate knitwear collection on twin identity by Benjamin Farrelly, NCAD 2026.">
+<meta property="og:title" content="Twinship · Benjamin Farrelly">
+<meta property="og:description" content="Twinship, a graduate knitwear collection on twin identity by Benjamin Farrelly, NCAD 2026.">
+<meta property="og:image" content="images/2069056c287a03d1d4f18a05f8abafce.jpg">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400&amp;family=Doto:wght@700..900&amp;display=swap">
+<style>
+:root{--hover:#C8262E;--bg:#FAF7EF;--surface:#FEFCF7;--ink:#2E2E2C;--mute:#66645E;--rule:#E3DDD1;--grid:#EEE9DE;--band:#F2EBDB;--accent:#2B4A9B;--soft:#D5CEC0;--back:#DFE4EE;--backline:#D0D7E6;--display:'Geist',sans-serif;--body:'Geist',sans-serif;--mono:'Geist Mono',monospace;--dw:500;--dls:-0.025em}
+html{background:var(--bg)}
+
+body{margin:0}
+.site a{color:var(--ink);text-decoration:none}
+.site a:hover{color:var(--accent)}
+.site a:focus-visible,.site button:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:11.5px;color:var(--mute);letter-spacing:.01em}
+.disp{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls)}
+.nav a,.nav button{position:relative;padding:6px 0;background:none;border:0;font:inherit;color:var(--ink);cursor:pointer}
+.nav a::after,.nav button::after{content:"";position:absolute;left:0;right:0;bottom:2px;border-bottom:1px dashed var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.nav a:hover::after,.nav button:hover::after{transform:scaleX(1)}
+.nav a[aria-current="page"]::after,.nav a[aria-current="true"]::after{transform:scaleX(1);border-bottom-style:solid}
+.nav a[aria-current="true"]{color:var(--ink)}
+.subnav a{color:var(--mute)}
+.subnav a[aria-current="true"]{color:var(--ink)}
+.ruler{height:8px;background-image:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 14px),repeating-linear-gradient(90deg,var(--mute) 0 1px,transparent 1px 140px);background-size:100% 4px,100% 8px;background-repeat:no-repeat;background-position:0 100%,0 100%;opacity:.7}
+.hem{position:fixed;left:0;right:0;bottom:0;z-index:30;height:40px;background:var(--surface);border-top:1px solid var(--rule);overflow:hidden;transition:height .5s cubic-bezier(.65,0,.25,1)}
+.hem::before{content:"";position:absolute;left:0;right:0;top:11px;height:1.5px;background-image:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 24px);opacity:.85;pointer-events:none}
+.hem.open{height:124px}
+.hem{height:48px}.hem.open{height:132px}
+.hemrow{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hemtab{border:0;background:none;padding:4px 0;font-family:var(--mono);font-size:11.5px;color:var(--ink);cursor:pointer}
+.hemtab:hover{color:var(--hover,var(--accent))}
+.hemmail{font-family:var(--mono);font-size:11.5px}
+.hemgrid{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
+.hem.open .hemgrid{visibility:visible;transition:visibility 0s}
+.hem .k{display:block;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
+.ghost{border:1px solid var(--rule);background:none;color:var(--ink);font-family:var(--mono);font-size:11.5px;min-height:36px;padding:0 12px;cursor:pointer}
+.ghost:hover{border-color:var(--ink)}
+.sheet{background:var(--surface);box-shadow:0 0 0 1px var(--rule);overflow:hidden}
+.sheet img{transition:transform .6s ease}
+.sheet:hover img{transform:scale(1.015)}
+.sec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:20px 64px;margin-bottom:24px;scroll-margin-top:120px}
+.c2,.c3,.c4,.c5{display:grid;gap:clamp(8px,1.2vw,18px)}
+.c2{grid-template-columns:repeat(2,minmax(0,1fr))}.c3{grid-template-columns:repeat(3,minmax(0,1fr))}.c4{grid-template-columns:repeat(4,minmax(0,1fr))}.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.r23,.r34,.r43,.r45,.r11,.r32{display:block;width:100%;object-fit:cover}
+.r23{aspect-ratio:2/3}.r34{aspect-ratio:3/4}.r43{aspect-ratio:4/3}.r45{aspect-ratio:4/5}.r11{aspect-ratio:1/1}.r32{aspect-ratio:3/2}
+.cap{padding-top:8px}
+.sub{margin:clamp(40px,7vh,72px) 0 16px;font-weight:400;padding-top:12px;border-top:1px solid var(--rule)}
+.look{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.6fr);gap:20px 48px;padding:32px 0;border-top:1px solid var(--rule)}
+.look:first-of-type{margin-top:8px}
+.glist{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;max-width:34ch;color:var(--mute)}
+.glist li{padding-left:16px;position:relative}
+.glist li::before{content:"";position:absolute;left:0;top:.7em;width:8px;border-top:1.5px dashed var(--accent)}
+.pieces{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2vw,32px);align-items:end}
+.pieces img{display:block;width:100%;height:clamp(160px,18vw,260px);object-fit:contain;filter:drop-shadow(0 6px 10px rgba(46,46,44,.12));transition:transform .5s ease}
+.pieces figure:hover img{transform:translateY(-6px) rotate(-1deg)}
+.lineup{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(4px,.8vw,12px);background:#fff;box-shadow:0 0 0 1px var(--rule);padding:clamp(8px,1.5vw,20px)}
+.lineup img{display:block;width:100%;aspect-ratio:3/4;object-fit:contain}
+.mas{columns:4 220px;column-gap:clamp(8px,1.2vw,18px)}
+.mas figure{break-inside:avoid;margin:0 0 clamp(8px,1.2vw,18px)}
+.mas img{display:block;width:100%;height:auto;background:var(--band)}
+@media (max-width:820px){.sec,.head,.pgrid,.look{grid-template-columns:minmax(0,1fr)!important}.looks,.c4,.c5,.c3{grid-template-columns:repeat(2,minmax(0,1fr))!important}.c2{grid-template-columns:minmax(0,1fr)!important}.pieces{grid-template-columns:repeat(3,minmax(0,1fr))}.lineup{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.site a:hover,.ribtab:hover,.arrow:hover{color:var(--hover,var(--accent))}
+.nav a::after,.nav button::after{border-bottom-color:var(--hover,var(--accent))}
+.nav a[aria-current="page"]::after,.nav a[aria-current="true"]::after,.nav button[aria-pressed="true"]::after{border-bottom-color:var(--accent)}
+.num,.site header a.disp{font-family:'Doto',monospace;font-weight:900;letter-spacing:0}
+.site.grid-wide{background-size:28px 20px}
+.site.grid-large{background-size:42px 30px}
+.site.grid-swatch{background-size:70px 50px}
+.site.grid-dots{background-image:radial-gradient(circle,var(--rule) 1px,transparent 1.6px);background-size:28px 20px;background-position:-14px -10px}
+.site.grid-off{background-image:none}
+.site{font-size:15.5px}
+.mono,.hemtab,.hemmail,.ghost{font-size:13px}
+.hem .k{font-size:11.5px}
+.nav{font-size:15.5px!important}
+.subnav,.filters{font-size:14.5px!important}
+.dl{font-size:14.5px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+</style>
+</head>
+<body>
+<div class="site grid-swatch">
+
+<header style="position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 0 clamp(16px, 4vw, 48px);">
+<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
+<a href="index.html" class="disp" style="font-size: clamp(19px, 1.9vw, 23px); line-height: 1.1;">Benjamin Farrelly</a>
+<nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px;">
+<a href="twinship.html" aria-current="page">Projects</a>
+<a href="samples.html">Knit samples</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="cv.html">CV</a>
+<button type="button" data-contact-toggle aria-expanded="false">Contact</button>
+</nav>
+</div>
+<div class="ruler" style="max-width: 1440px; margin: 0 auto;"></div>
+<nav class="nav subnav" aria-label="On this page" style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2px 24px; padding: 8px 0 6px; font-size: 13px;">
+<span class="mono" style="padding: 7px 0;">Twinship</span>
+<a href="#concept" data-sec="concept" aria-current="true">Concept</a>
+<a href="#looks" data-sec="looks" aria-current="false">Looks</a>
+<a href="#technical" data-sec="technical" aria-current="false">Technical</a>
+<a href="#credits" data-sec="credits" aria-current="false">Credits</a>
+</nav>
+</header>
+
+<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
+
+<nav aria-label="Projects" style="display: flex; flex-wrap: wrap; gap: 12px; padding: 32px 0 0;">
+<a href="twinship.html" aria-current="page" style="display: flex; gap: 12px; align-items: center; padding: 8px 14px 8px 8px; background: var(--surface); box-shadow: 0 0 0 1px var(--ink);">
+<img src="images/63e16f22adb37b8e7539af0ccb16488f.jpg" alt="" style="width: 36px; height: 48px; object-fit: cover;">
+<span><span style="display: block; font-weight: 500;">Twinship</span><span class="mono">Graduate collection, 2026</span></span>
+</a>
+<span style="display: flex; gap: 12px; align-items: center; padding: 8px 14px 8px 8px; box-shadow: 0 0 0 1px var(--rule); background-image: repeating-linear-gradient(135deg, transparent 0 6px, var(--grid) 6px 7px);">
+<span style="width: 36px; height: 48px; box-shadow: inset 0 0 0 1px var(--rule);"></span>
+<span><span style="display: block; color: var(--mute);">Next project</span><span class="mono">On the machine</span></span>
+</span>
+</nav>
+
+<section aria-labelledby="title-h" class="head" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px 64px; padding: clamp(40px, 8vh, 80px) 0 40px; align-items: end;">
+<h1 id="title-h" class="disp" style="margin: 0; font-size: clamp(42px, 5vw, 72px); line-height: 1;">Twinship</h1>
+<dl style="margin: 0; display: grid; grid-template-columns: 8em minmax(0, 1fr); gap: 8px 24px; max-width: 640px;">
+<dt class="mono" style="padding-top: 2px;">Project</dt><dd style="margin: 0;">Graduate knitwear collection, BA Fashion Design (Knit), NCAD</dd>
+<dt class="mono" style="padding-top: 2px;">Year</dt><dd style="margin: 0;">2026</dd>
+<dt class="mono" style="padding-top: 2px;">Materials</dt><dd style="margin: 0;">Merino, Grilon K85 thermoplastic yarn, cotton, boiled wool, wool suiting, check wool, leather</dd>
+<dt class="mono" style="padding-top: 2px;">Machines</dt><dd style="margin: 0;">12 gauge industrial Dubied, Passap 8 gauge, 12 gauge linker</dd>
+<dt class="mono" style="padding-top: 2px;">Shown</dt><dd style="margin: 0;">NCAD Works graduate exhibition, 2026</dd>
+</dl>
+</section>
+
+<figure style="margin: 0;"><img src="images/2069056c287a03d1d4f18a05f8abafce.jpg" alt="Two models sitting on classroom desks, one in a dark coat and check baker boy hat, one in the check peplum jacket and red boots" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--band);"><figcaption class="mono" style="padding-top: 8px;">Arjius and Isolt, photographed by Dylan Gomery</figcaption></figure>
+<section id="concept" aria-labelledby="concept-h" class="sec" style="padding-top: clamp(64px, 12vh, 128px);">
+<h2 id="concept-h" class="mono" style="margin: 0; font-weight: 400;">Concept</h2>
+<div>
+<p class="disp" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.22; max-width: 32ch;">Twinship as a spectrum of identity, where similarity and difference move between alignment, gentle variation and dramatic change.</p>
+<p style="margin: 22px 0 0; max-width: 60ch;">Patterned fabrics sit alongside contrast knit. Stripes, paired silhouettes and repeated shapes reference the outside expectation that twins should match, while breaks in colour, texture and construction mark the moments where identity begins to separate.</p>
+<p style="margin: 14px 0 0; max-width: 60ch;">The line-up is structured around four identity statuses, Diffusion, Foreclosure, Moratorium and Achievement, and moves from a shared boyhood towards more defined personal expression, blending masculine and feminine references along the way.</p>
+<p style="margin: 14px 0 0; max-width: 60ch;">Using a fine gauge knit machine with merino and Grilon thermoplastic yarns, I set out to create rigidity in a medium that is usually soft, using knit to control the narrative of twinship through silhouette and fabrication.</p>
+<figure style="margin: 36px 0 0; max-width: 640px;">
+<img src="images/22ac67af7f39e6c47a48163fada3617f.webp" alt="Four pairs of stick figures, grey for the first three statuses and red and blue for the last" style="display: block; width: 100%; height: auto;">
+<figcaption class="mono" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; padding-top: 10px;"><span>Diffusion</span><span>Foreclosure</span><span>Moratorium</span><span>Achievement</span></figcaption>
+</figure>
+</div>
+</section>
+
+<section id="looks" aria-labelledby="looks-h" style="padding-top: clamp(64px, 12vh, 128px); scroll-margin-top: 120px;">
+<div class="sec"><h2 id="looks-h" class="mono" style="margin: 0; font-weight: 400;">Looks</h2><p style="margin: 0; max-width: 60ch;">Three looks, each photographed front, side and back in an NCAD classroom.</p></div>
+
+<div class="look">
+<div>
+<p class="mono" style="margin: 0;"><span class="num" style="font-size: 18px; color: var(--ink);">01</span> · Danny</p>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">Rugby moulded knit and pleated double-crotch culottes</h3>
+<ul class="glist"><li>Grilon and merino moulded, fully fashioned heart rugby raglan</li><li>Boiled wool and Grilon knit baker boy hat</li><li>Wool suiting pleated double-crotch culottes</li></ul>
+</div>
+<div class="c4">
+<figure style="margin: 0;"><img src="images/42632d35be9fdfc57b2b0614b0ba3fce.jpg" alt="Look one from the front: striped rugby knit, striped hat and pleated culottes" class="r23"><figcaption class="mono cap">Front</figcaption></figure>
+<figure style="margin: 0;"><img src="images/7fc4d914bc4a61c6194c9224b63450e6.jpg" alt="Look one from the side" class="r23"><figcaption class="mono cap">Side</figcaption></figure>
+<figure style="margin: 0;"><img src="images/e642329a9b9fdf08ae528ae0f823023e.jpg" alt="Look one from the back" class="r23"><figcaption class="mono cap">Back</figcaption></figure>
+<figure style="margin: 0;"><img src="images/040ac2fc4478ef4f39ea6d68a54b7034.jpg" alt="Close-up of the striped rugby knit and ribbed collar" class="r23"><figcaption class="mono cap">Detail</figcaption></figure>
+</div>
+</div>
+
+<div class="look">
+<div>
+<p class="mono" style="margin: 0;"><span class="num" style="font-size: 18px; color: var(--ink);">02</span> · Arjius</p>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">Leather appliqué double-breasted blazer and pleated clasp shorts</h3>
+<ul class="glist"><li>Wool double-breasted funnel-neck blazer with leather and merino appliqué</li><li>Leather appliqué pleated shorts</li><li>Oversized check baker boy hat</li></ul>
+</div>
+<div class="c4">
+<figure style="margin: 0;"><img src="images/d3422322d972256f273c31cb01b63fd0.jpg" alt="Look two from the front: olive double-breasted blazer, pleated shorts and blue socks" class="r23"><figcaption class="mono cap">Front</figcaption></figure>
+<figure style="margin: 0;"><img src="images/371ceb1359110b5c69ab31c9f240c297.jpg" alt="Look two from the side, showing the red appliqué on the sleeve" class="r23"><figcaption class="mono cap">Side</figcaption></figure>
+<figure style="margin: 0;"><img src="images/42a42d1a1b92f09886401973d1b92a4c.jpg" alt="Back of the blazer with a large tonal leather appliqué" class="r23"><figcaption class="mono cap">Back</figcaption></figure>
+<figure style="margin: 0;"><img src="images/39251c1c7900cbf6f5a6f83d1ff9ffbe.jpg" alt="Close-up of the red merino and tonal leather appliqué on the blazer" class="r23"><figcaption class="mono cap">Appliqué, close-up</figcaption></figure>
+</div>
+</div>
+
+<div class="look">
+<div>
+<p class="mono" style="margin: 0;"><span class="num" style="font-size: 18px; color: var(--ink);">03</span> · Isolt</p>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">School girl knit dress and check peplum semi-tailored jacket</h3>
+<ul class="glist"><li>Check wool peplum school jacket with external and internal pockets and a pleated merino and Grilon hemline</li><li>Cotton school dress with merino and Grilon pleats, worn with or without the jacket</li></ul>
+</div>
+<div class="c4">
+<figure style="margin: 0;"><img src="images/ca8179008a019a58781db80fdc861d14.jpg" alt="Look three from the front: check peplum jacket with blue rosette, pleated dress and red boots" class="r23"><figcaption class="mono cap">Front</figcaption></figure>
+<figure style="margin: 0;"><img src="images/2e2c08415a45874d9b1f44cca8b5cdb3.jpg" alt="Look three from the side" class="r23"><figcaption class="mono cap">Side</figcaption></figure>
+<figure style="margin: 0;"><img src="images/5b7f05d158a0d7d4475e2356e6e81fa7.jpg" alt="Look three from the back" class="r23"><figcaption class="mono cap">Back</figcaption></figure>
+<figure style="margin: 0;"><img src="images/82c366a0109bf9eb71a43d950fc43bb3.jpg" alt="Look three from the back without the jacket, showing the dress and pleats" class="r23"><figcaption class="mono cap">Dress, worn without the jacket</figcaption></figure>
+</div>
+</div>
+
+<div class="look">
+<div>
+<p class="mono" style="margin: 0;">Separate piece</p>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">Orange striped knit</h3>
+
+</div>
+<div class="c4">
+<figure style="margin: 0;"><img src="images/610f04fd3f284e28a59b8717f653ad10.jpg" alt="Model in the orange striped knit holding the olive blazer" class="r23"><figcaption class="mono cap">Worn, with the blazer</figcaption></figure>
+<figure style="margin: 0;"><img src="images/93222f3e84cd5968230eb918c9b6a7b0.jpg" alt="Orange striped knit from behind with the olive blazer over one shoulder" class="r23"><figcaption class="mono cap">Back</figcaption></figure>
+<figure style="margin: 0;"><img src="images/d9c37bcd2103c696f8a18dbd5e65a6fe.jpg" alt="Close-up of the orange, blue and red striped knit" class="r23"><figcaption class="mono cap">Close-up</figcaption></figure>
+<figure style="margin: 0;"><img src="images/49c38e0c50bc9654e09a2f190bd3148a.jpg" alt="Orange striped knit worn over olive trousers" class="r23"><figcaption class="mono cap">Behind the scenes</figcaption></figure>
+</div>
+</div>
+
+<h3 class="mono sub">The shoot</h3>
+<div class="mas">
+<figure><img src="images/44976fca90d3181cb14cd3c1ebe7dea8.jpg" alt="Close portrait in a check baker boy hat and dark pinstripe coat"></figure>
+<figure><img src="images/ed7cc452c3c9eac3b916ef8c3d4a699d.jpg" alt="Model in the olive blazer standing over another sitting in a round window"></figure>
+<figure><img src="images/20db954b09103368694f2c23158f3dcb.jpg" alt="Three models spread across the stairwell"></figure>
+<figure><img src="images/8c5410da989c2dec63fbaa92518c162f.jpg" alt="Two models side by side against a white wall in the rugby knit and the check jacket"></figure>
+<figure><img src="images/953246c2f8670c0b9503feb0d747affa.jpg" alt="Model standing on a classroom desk"></figure>
+<figure><img src="images/c3dbb924bfde799ea315757bfad5ecfa.jpg" alt="Model seated at a desk in a dark coat and check baker boy hat"></figure>
+<figure><img src="images/2f32bc319b3e4423678e99d858feacec.jpg" alt="Model seated on a desk in the check peplum jacket and red boots"></figure>
+<figure><img src="images/d53b0e06535267fe3aa5f6fbfcf2e527.jpg" alt="Three models in a classroom, one standing on a desk"></figure>
+<figure><img src="images/02a41d46c875bd1507e0e24572e96e1d.jpg" alt="Three models against a dark classroom wall"></figure>
+<figure><img src="images/0ea290eb897c7630e3bc8b8b792c8310.jpg" alt="The check peplum jacket under the olive blazer, from the side"></figure>
+<figure><img src="images/7b7f266e78108ca11a9c07e5f4ddba34.jpg" alt="The check peplum jacket and the olive blazer, from the front"></figure>
+<figure><img src="images/96df86ed30619dc9ea59de172a755226.jpg" alt="Two models standing on a desk, holding hands"></figure>
+</div>
+<p class="mono" style="margin: 2px 0 0;">Photography by Dylan Gomery</p>
+
+<h3 class="mono sub">Behind the scenes</h3>
+<div class="mas">
+<figure><img src="images/b7bd965a8702153c1850d562b3e41379.jpg" alt="The peplum jacket and pleated dress, seated on a desk"></figure>
+<figure><img src="images/e43444f8e3ae5bb885ccd790a3b4ed58.jpg" alt="The peplum jacket and pleated dress, standing"></figure>
+<figure><img src="images/2fc79f8619dabf3805ada97889796401.jpg" alt="The peplum jacket with its blue rosette"></figure>
+<figure><img src="images/60612ecf28e1d0eea36bbc68b7e79779.jpg" alt="Red patent boots and striped knit on set"><figcaption class="mono cap">behind the scenes</figcaption></figure>
+<figure><img src="images/835a7acea81fe05acf656eb52eac7724.jpg" alt="Three models standing in the classroom"></figure>
+<figure><img src="images/6d4c372368ea7240b9195e37519b8b85.jpg" alt="The classroom set with lights and a clothes rail"></figure>
+<figure><img src="images/735dbeb8ec74323fcb5115b2d3e85bcc.jpg" alt="Pleated dress hem and red boots"></figure>
+<figure><img src="images/8d6ea5de124103709286c6e550a148b2.jpg" alt="The peplum hem over the pleated dress"></figure>
+<figure><img src="images/6dab38b8bd69579975eeacc5a076e2af.jpg" alt="The rugby knit and the orange striped knit worn side by side"></figure>
+<figure><img src="images/257860b1a9c9c119827654647844e2d5.jpg" alt="Model in the olive coat sitting in the round window"></figure>
+<figure><img src="images/b76a20489ce1766dd6186defe52f2ae7.jpg" alt="A row of legs, socks and boots"></figure>
+<figure><img src="images/85348572a69320dde34217b01a563d66.jpg" alt="Setting up in the classroom"></figure>
+<figure><img src="images/a003343d3d9afe58dbc26375a2078fec.jpg" alt="The orange striped knit and the olive blazer at the clothes rail"></figure>
+<figure><img src="images/6ac9c2a72783816fb68f3e4a51992feb.jpg" alt="The blazer look from behind"></figure>
+<figure><img src="images/8e165dd30567872cc2749316410b899f.jpg" alt="Two models in a hallway after the shoot"><figcaption class="mono cap">Eating wheelies post photo shoot :O</figcaption></figure>
+</div>
+<p class="mono" style="margin: 2px 0 0;">Shot on a Sony DSC-S650 digicam</p>
+</section>
+
+<section id="technical" aria-labelledby="tech-h" style="padding-top: clamp(64px, 12vh, 128px); scroll-margin-top: 120px;">
+<div class="sec"><h2 id="tech-h" class="mono" style="margin: 0; font-weight: 400;">Technical</h2><p style="margin: 0; max-width: 60ch;">Spec sheets for three key pieces, with the knit construction behind them.</p></div>
+<div class="c2">
+<figure class="sheet" style="margin: 0;"><img src="images/fe75f7545deffa8fb32d01bd20ab9e7c.jpg" alt="Tech pack spec sheet for the A and B moulded rugby knit, with flats, yarns and measurements" style="display: block; width: 100%; height: auto;"><figcaption class="mono cap" style="padding: 8px 10px;">A + B Moulded Rugby Knit</figcaption></figure>
+<figure class="sheet" style="margin: 0;"><img src="images/467020158484bdb6bea52e405e4b770d.jpg" alt="Tech pack spec sheet for the peplum pinafore school jacket, with flats, fabric swatches and measurements" style="display: block; width: 100%; height: auto;"><figcaption class="mono cap" style="padding: 8px 10px;">Peplum Pinafore School Jacket</figcaption></figure>
+<figure class="sheet" style="margin: 0;"><img src="images/05e98307426011885c99f2f81f819a09.jpg" alt="Tech pack spec sheet for the My First Jumper merino striped knit, with front and back flats, detachable sleeve, button and rib details, knits and measurements" style="display: block; width: 100%; height: auto;"><figcaption class="mono cap" style="padding: 8px 10px;">“My First Jumper” Merino Wool Striped Knit</figcaption></figure>
+</div>
+<div class="sec" style="margin-top: 40px;">
+<span class="mono">Construction</span>
+<dl style="margin: 0; display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 8px 24px; max-width: 720px;">
+<dt class="mono" style="padding-top: 2px;">Rugby knit</dt><dd style="margin: 0;">Fully fashioned raglan, knitted on a 12 gauge industrial Dubied and linked on a 12 gauge linker with chain stitch</dd>
+<dt class="mono" style="padding-top: 2px;">Ribs</dt><dd style="margin: 0;">Neck and arm ribs doubled and sandwiched, six rows on the front bed of a Passap 8 gauge</dd>
+<dt class="mono" style="padding-top: 2px;">Yarns</dt><dd style="margin: 0;">100% merino, Expotex Grilon K85, 100% cotton ribs</dd>
+<dt class="mono" style="padding-top: 2px;">Peplum jacket</dt><dd style="margin: 0;">100% bonded wool with silk lining, knitted merino and Grilon pleats, pleated cap sleeves, blue topstitching and cream buttonholes</dd>
+</dl>
+</div>
+</section>
+
+<section id="credits" aria-labelledby="credits-h" class="sec" style="padding-top: clamp(64px, 12vh, 128px);">
+<h2 id="credits-h" class="mono" style="margin: 0; font-weight: 400;">Credits</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: 8em minmax(0, 1fr); gap: 8px 24px;">
+<dt class="mono" style="padding-top: 2px;">Design</dt><dd style="margin: 0;">Benjamin Farrelly</dd>
+<dt class="mono" style="padding-top: 2px;">Photography</dt><dd style="margin: 0;">Dylan Gomery</dd>
+<dt class="mono" style="padding-top: 2px;">Models</dt><dd style="margin: 0;">Isolt, Danny and Arjius</dd>
+<dt class="mono" style="padding-top: 2px;">Assisted by</dt><dd style="margin: 0;">Aishling Ryan Ellis</dd>
+<dt class="mono" style="padding-top: 2px;">Thanks</dt><dd style="margin: 0;">All staff and technicians at NCAD</dd>
+<dt class="mono" style="padding-top: 2px;">Documents</dt><dd style="margin: 0;"><a href="files/Benjamin-Farrelly-Twinship-Lookbook.pdf" download="Benjamin-Farrelly-Twinship-Lookbook.pdf" style="border-bottom: 1px dashed var(--accent);">Lookbook, 48 pages (PDF, 11 MB)</a> · <a href="portfolio.html" style="border-bottom: 1px dashed var(--accent);">Portfolio</a></dd>
+</dl>
+</section>
+
+<nav aria-label="Next" style="display: flex; justify-content: space-between; gap: 16px; padding: clamp(64px, 12vh, 128px) 0 0; font-size: clamp(18px, 2vw, 24px);">
+<a href="index.html" class="disp">← Home</a>
+<a href="samples.html" class="disp">Knit samples →</a>
+</nav>
+</main>
+
+<footer style="max-width: 1440px; margin: 64px auto 0; padding: 14px clamp(16px, 4vw, 48px) 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;">
+<span class="mono">Benjamin Farrelly · knitwear and textiles</span><span class="mono">© 2026</span>
+</footer>
+
+<div class="hem" role="region" aria-label="Contact">
+<div class="hemrow"><button class="hemtab" type="button" data-contact-toggle aria-expanded="false">Contact ↑</button><a class="hemmail" href="mailto:benfarrelly03@gmail.com">benfarrelly03@gmail.com</a></div>
+<div class="hemgrid"><span><span class="k">Phone</span><a href="tel:+353858715077">+353 85 871 5077</a></span><span><span class="k">Instagram</span><a href="https://www.instagram.com/benjfarrelly/">@benjfarrelly</a></span></div>
+</div>
+</div>
+<script src="js/site.js"></script>
+<script src="js/twinship.js"></script>
+</body>
+</html>
