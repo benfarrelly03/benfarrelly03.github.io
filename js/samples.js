@@ -27,9 +27,11 @@
       '<img src="' + t.src + '" alt="' + alt + '" loading="lazy" draggable="false" style="left:' + g.il + '%;top:' + g.it + '%;width:' + g.iw + '%;height:' + g.ih + '%;transform:rotate(' + rot + 'deg)"></span>';
   }
 
-  function cols() { var V = window.innerWidth || 1280; return V < 760 ? 4 : V < 1100 ? 6 : 12; }
+  function cols() { var V = window.innerWidth || 1280; return V < 600 ? 6 : V < 1100 ? 8 : 12; }
+  // On computer screens the grid is narrower than the page so samples are not blown up.
+  function gridMax() { var V = window.innerWidth || 1280; return V < 1100 ? 'none' : 'clamp(960px, 72vw, 1240px)'; }
   function span(t, T) {
-    var cw = t.cw || 3, min = T === 6 ? 1 : 2;
+    var cw = t.cw || 3, min = 2;
     if (T === 12) return Math.max(min, Math.min(12, cw));
     return Math.max(min, Math.min(T, Math.round(cw * T / 12)));
   }
@@ -54,7 +56,8 @@
   }
 
   function layout() {
-    var T = cols(), gap = T >= 12 ? 40 : T >= 6 ? 28 : 18, W = grid.clientWidth || 1184, colW = (W - (T - 1) * gap) / T;
+    grid.style.maxWidth = gridMax(); grid.style.marginLeft = 'auto'; grid.style.marginRight = 'auto';
+    var T = cols(), W = grid.clientWidth || 1184, gap = T >= 12 ? Math.round(Math.max(24, Math.min(48, W * 0.032))) : T >= 8 ? 20 : 12, colW = (W - (T - 1) * gap) / T;
     grid.style.gridTemplateColumns = 'repeat(' + T + ', minmax(0, 1fr))';
     grid.style.columnGap = gap + 'px';
     Array.prototype.forEach.call(grid.children, function (card, k) {

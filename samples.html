@@ -43,11 +43,11 @@ body{margin:0}
 .hem{position:fixed;left:0;right:0;bottom:0;z-index:30;height:48px;background:var(--surface);border-top:1px solid var(--rule);overflow:hidden;transition:height .5s cubic-bezier(.65,0,.25,1)}
 .hem::before{content:"";position:absolute;left:0;right:0;top:11px;height:1.5px;background-image:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 24px);opacity:.85;pointer-events:none}
 .hem.open{height:132px}
-.hemrow{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hemrow{max-width:var(--wrap);margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .hemtab{border:0;background:none;padding:4px 0;font-family:var(--mono);font-size:13px;color:var(--ink);cursor:pointer}
 .hemtab:hover{color:var(--hover,var(--accent))}
 .hemmail{font-family:var(--mono);font-size:13px}
-.hemgrid{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
+.hemgrid{max-width:var(--wrap);margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
 .hem.open .hemgrid{visibility:visible;transition:visibility 0s}
 .hem .k{display:block;font-family:var(--mono);font-size:11.5px;color:var(--mute)}
 .btn{border:1px solid var(--rule);background:var(--surface);color:var(--ink);font-family:var(--mono);font-size:13px;min-height:38px;padding:0 13px;cursor:pointer}
@@ -78,6 +78,9 @@ body{margin:0}
 /* lightbox */
 .lbx{position:fixed;inset:0;z-index:85;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px}
 .lbframe{position:relative;overflow:hidden;box-shadow:0 0 0 1px var(--rule);max-width:100%}
+.site{--wrap:1440px}
+@media (min-width:1100px){.site{--wrap:clamp(960px,82vw,1400px)}}
+@media (max-width:600px){header>div:first-child{padding:22px 0 10px!important;gap:4px 24px!important}.nav{gap:0 18px!important;font-size:15px!important}}
 .lbx[hidden]{display:none!important}
 .lbx .btn{min-height:40px}
 @media (max-width:700px){.site>header{position:relative!important}}
@@ -87,7 +90,7 @@ body{margin:0}
 </head>
 <body>
 <div class="site grid-swatch"><header style="position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 0 clamp(16px, 4vw, 48px);">
-<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
+<div style="max-width: var(--wrap); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
 <a href="index.html" class="disp" style="font-size: clamp(19px, 1.9vw, 23px); line-height: 1.1;">Benjamin Farrelly</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15.5px;">
 <a href="twinship.html">Projects</a>
@@ -97,15 +100,14 @@ body{margin:0}
 <button type="button" data-contact-toggle aria-expanded="false">Contact</button>
 </nav>
 </div>
-<div class="ruler" style="max-width: 1440px; margin: 0 auto;"></div>
-<div class="tabs" id="tabs" role="tablist" aria-label="Knit sample categories" style="max-width: 1440px; margin: 0 auto;">
+<div class="ruler" style="max-width: var(--wrap); margin: 0 auto;"></div>
+<div class="tabs" id="tabs" role="tablist" aria-label="Knit sample categories" style="max-width: var(--wrap); margin: 0 auto;">
 
 </div>
 </header>
-<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
+<main style="max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
 <section aria-labelledby="s-h" class="head" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px 64px; padding: clamp(36px, 7vh, 72px) 0 32px; align-items: end;">
-<h1 id="s-h" class="disp" style="margin: 0; font-size: clamp(42px, 5vw, 72px); line-height: 1;">Stripes</h1>
-<p style="margin: 0; max-width: 54ch;">Swatches, scans and structure tests from the knit room, sorted by technique. Choose a category above, and click any sample to see it larger.</p>
+<h1 id="s-h" class="disp" style="margin: 0; font-size: clamp(40px, 3.8vw, 64px); line-height: 1;">Stripes</h1>
 </section>
 <div class="kgrid" id="kgrid" style="min-height: 160px;"></div>
 </main>

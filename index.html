@@ -39,11 +39,11 @@ body{margin:0}
 .hem::before{content:"";position:absolute;left:0;right:0;top:11px;height:1.5px;background-image:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 24px);opacity:.85;pointer-events:none}
 .hem.open{height:124px}
 .hem{height:48px}.hem.open{height:132px}
-.hemrow{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hemrow{max-width:var(--wrap);margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .hemtab{border:0;background:none;padding:4px 0;font-family:var(--mono);font-size:11.5px;color:var(--ink);cursor:pointer}
 .hemtab:hover{color:var(--hover,var(--accent))}
 .hemmail{font-family:var(--mono);font-size:11.5px}
-.hemgrid{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
+.hemgrid{max-width:var(--wrap);margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
 .hem.open .hemgrid{visibility:visible;transition:visibility 0s}
 .hem .k{display:block;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
 .ghost{border:1px solid var(--rule);background:none;color:var(--ink);font-family:var(--mono);font-size:11.5px;min-height:36px;padding:0 12px;cursor:pointer}
@@ -57,7 +57,7 @@ body{margin:0}
 .arrow{border:0;background:none;padding:12px;cursor:pointer;color:var(--ink);display:flex}
 .arrow:hover{color:var(--accent)}
 .bleed{width:100vw;margin-left:calc(50% - 50vw);overflow:hidden}
-.eg{position:relative;left:-5vw;width:110vw;height:clamp(380px,50vw,760px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(10px,1.2vw,18px)}
+.eg{position:relative;left:-5vw;width:110vw;height:clamp(320px,min(40vw,64vh),680px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(10px,1.2vw,18px)}
 .egm{grid-area:1 / 3 / 3 / 5;position:relative;display:block;overflow:hidden;background:var(--band)}
 .egs{border:0;padding:0;background:var(--band);cursor:pointer;display:block;min-height:0;overflow:hidden;opacity:.55;transition:opacity .35s ease}
 .egs img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
@@ -80,6 +80,9 @@ body{margin:0}
 .nav{font-size:15.5px!important}
 .subnav,.filters{font-size:14.5px!important}
 .dl{font-size:14.5px}
+.site{--wrap:1440px}
+@media (min-width:1100px){.site{--wrap:clamp(960px,82vw,1400px)}}
+@media (max-width:600px){header>div:first-child{padding:22px 0 10px!important;gap:4px 24px!important}.nav{gap:0 18px!important;font-size:15px!important}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 </style>
@@ -88,7 +91,7 @@ body{margin:0}
 <div class="site grid-swatch">
 
 <header style="position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 0 clamp(16px, 4vw, 48px);">
-<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
+<div style="max-width: var(--wrap); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
 <a href="index.html" class="disp" style="font-size: clamp(19px, 1.9vw, 23px); line-height: 1.1;">Benjamin Farrelly</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px;">
 <a href="twinship.html">Projects</a>
@@ -98,10 +101,10 @@ body{margin:0}
 <button type="button" data-contact-toggle aria-expanded="false">Contact</button>
 </nav>
 </div>
-<div class="ruler" style="max-width: 1440px; margin: 0 auto;"></div>
+<div class="ruler" style="max-width: var(--wrap); margin: 0 auto;"></div>
 </header>
 
-<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
+<main style="max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
 <section aria-label="Selected work" id="montage" style="padding: clamp(32px, 6vh, 64px) 0 0;">
 <div class="bleed">
 <div class="eg">
@@ -124,7 +127,7 @@ body{margin:0}
 <section aria-labelledby="about-h" class="two" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px 64px; padding: clamp(80px, 14vh, 160px) 0 0;">
 <h2 id="about-h" class="mono" style="margin: 0; font-weight: 400;">About</h2>
 <div>
-<p class="disp" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.22; max-width: 26ch;">Knitwear and Fashion Design</p>
+<p class="disp" style="margin: 0; font-size: clamp(22px, 2vw, 30px); line-height: 1.22; max-width: 26ch;">Knitwear and Fashion Design</p>
 <p style="margin: 22px 0 0; max-width: 60ch;">My name is Ben Farrelly, I studied Fashion Design and Knit at the National College of Art and Design in Dublin, graduating with First Class Honours in 2026. My work is driven by colour, silhouette and experimental textiles, and by the process of making as much as the finished piece. For my graduate collection I used a fine gauge Dubied machine with merino and Grilon thermoplastic yarns to create rigidity in a medium that is usually soft.</p>
 <dl style="margin: 36px 0 0; display: grid; grid-template-columns: 9em minmax(0, 1fr); gap: 10px 24px; max-width: 640px; border-top: 1px solid var(--rule); padding-top: 18px;">
 <dt class="mono" style="padding-top: 2px;">Education</dt><dd style="margin: 0;">BA (Hons) Fashion Design (Knit), NCAD, 2021–2026, First Class Honours</dd>

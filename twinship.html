@@ -42,11 +42,11 @@ body{margin:0}
 .hem::before{content:"";position:absolute;left:0;right:0;top:11px;height:1.5px;background-image:repeating-linear-gradient(90deg,var(--accent) 0 10px,transparent 10px 24px);opacity:.85;pointer-events:none}
 .hem.open{height:124px}
 .hem{height:48px}.hem.open{height:132px}
-.hemrow{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hemrow{max-width:var(--wrap);margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .hemtab{border:0;background:none;padding:4px 0;font-family:var(--mono);font-size:11.5px;color:var(--ink);cursor:pointer}
 .hemtab:hover{color:var(--hover,var(--accent))}
 .hemmail{font-family:var(--mono);font-size:11.5px}
-.hemgrid{max-width:1440px;margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
+.hemgrid{max-width:var(--wrap);margin:0 auto;padding:18px clamp(16px,4vw,48px) 0;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px 40px;visibility:hidden;transition:visibility 0s linear .5s}
 .hem.open .hemgrid{visibility:visible;transition:visibility 0s}
 .hem .k{display:block;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
 .ghost{border:1px solid var(--rule);background:none;color:var(--ink);font-family:var(--mono);font-size:11.5px;min-height:36px;padding:0 12px;cursor:pointer}
@@ -90,6 +90,10 @@ body{margin:0}
 .nav{font-size:15.5px!important}
 .subnav,.filters{font-size:14.5px!important}
 .dl{font-size:14.5px}
+.site{--wrap:1440px}
+@media (min-width:1100px){.site{--wrap:clamp(960px,82vw,1400px)}}
+@media (max-width:600px){header>div:first-child{padding:22px 0 10px!important;gap:4px 24px!important}.nav{gap:0 18px!important;font-size:15px!important}}
+@media (max-width:600px){.head dl{grid-template-columns:6.5em minmax(0,1fr)!important}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
 </style>
@@ -98,7 +102,7 @@ body{margin:0}
 <div class="site grid-swatch">
 
 <header style="position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 0 clamp(16px, 4vw, 48px);">
-<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
+<div style="max-width: var(--wrap); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 38px 0 14px;">
 <a href="index.html" class="disp" style="font-size: clamp(19px, 1.9vw, 23px); line-height: 1.1;">Benjamin Farrelly</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 14px;">
 <a href="twinship.html" aria-current="page">Projects</a>
@@ -108,8 +112,8 @@ body{margin:0}
 <button type="button" data-contact-toggle aria-expanded="false">Contact</button>
 </nav>
 </div>
-<div class="ruler" style="max-width: 1440px; margin: 0 auto;"></div>
-<nav class="nav subnav" aria-label="On this page" style="max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2px 24px; padding: 8px 0 6px; font-size: 13px;">
+<div class="ruler" style="max-width: var(--wrap); margin: 0 auto;"></div>
+<nav class="nav subnav" aria-label="On this page" style="max-width: var(--wrap); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2px 24px; padding: 8px 0 6px; font-size: 13px;">
 <span class="mono" style="padding: 7px 0;">Twinship</span>
 <a href="#concept" data-sec="concept" aria-current="true">Concept</a>
 <a href="#looks" data-sec="looks" aria-current="false">Looks</a>
@@ -118,7 +122,7 @@ body{margin:0}
 </nav>
 </header>
 
-<main style="max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
+<main style="max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px);">
 
 <nav aria-label="Projects" style="display: flex; flex-wrap: wrap; gap: 12px; padding: 32px 0 0;">
 <a href="twinship.html" aria-current="page" style="display: flex; gap: 12px; align-items: center; padding: 8px 14px 8px 8px; background: var(--surface); box-shadow: 0 0 0 1px var(--ink);">
@@ -132,7 +136,7 @@ body{margin:0}
 </nav>
 
 <section aria-labelledby="title-h" class="head" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 24px 64px; padding: clamp(40px, 8vh, 80px) 0 40px; align-items: end;">
-<h1 id="title-h" class="disp" style="margin: 0; font-size: clamp(42px, 5vw, 72px); line-height: 1;">Twinship</h1>
+<h1 id="title-h" class="disp" style="margin: 0; font-size: clamp(40px, 3.8vw, 64px); line-height: 1;">Twinship</h1>
 <dl style="margin: 0; display: grid; grid-template-columns: 8em minmax(0, 1fr); gap: 8px 24px; max-width: 640px;">
 <dt class="mono" style="padding-top: 2px;">Project</dt><dd style="margin: 0;">Graduate knitwear collection, BA Fashion Design (Knit), NCAD</dd>
 <dt class="mono" style="padding-top: 2px;">Year</dt><dd style="margin: 0;">2026</dd>
@@ -142,11 +146,11 @@ body{margin:0}
 </dl>
 </section>
 
-<figure style="margin: 0;"><img src="images/2069056c287a03d1d4f18a05f8abafce.jpg" alt="Two models sitting on classroom desks, one in a dark coat and check baker boy hat, one in the check peplum jacket and red boots" style="display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--band);"></figure>
+<figure style="margin: 0;"><img src="images/2069056c287a03d1d4f18a05f8abafce.jpg" alt="Two models sitting on classroom desks, one in a dark coat and check baker boy hat, one in the check peplum jacket and red boots" style="display: block; width: 100%; aspect-ratio: 3 / 2; max-height: 78vh; object-fit: cover; background: var(--band);"></figure>
 <section id="concept" aria-labelledby="concept-h" class="sec" style="padding-top: clamp(64px, 12vh, 128px);">
 <h2 id="concept-h" class="mono" style="margin: 0; font-weight: 400;">Concept</h2>
 <div>
-<p class="disp" style="margin: 0; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.22; max-width: 32ch;">Twinship as a spectrum of identity, where similarity and difference move between alignment, gentle variation and dramatic change.</p>
+<p class="disp" style="margin: 0; font-size: clamp(22px, 2vw, 30px); line-height: 1.22; max-width: 32ch;">Twinship as a spectrum of identity, where similarity and difference move between alignment, gentle variation and dramatic change.</p>
 <p style="margin: 22px 0 0; max-width: 60ch;">Patterned fabrics sit alongside contrast knit. Stripes, paired silhouettes and repeated shapes reference the outside expectation that twins should match, while breaks in colour, texture and construction mark the moments where identity begins to separate.</p>
 <p style="margin: 14px 0 0; max-width: 60ch;">The line up is structured around four identity statuses, Diffusion, Foreclosure, Moratorium and Achievement, and moves from a shared boyhood towards more defined personal expression, blending masculine and feminine references along the way.</p>
 <p style="margin: 14px 0 0; max-width: 60ch;">Using a fine gauge knit machine with merino and Grilon thermoplastic yarns, I set out to create rigidity in a medium that is usually soft, using knit to control the narrative of twinship through silhouette and fabrication.</p>
@@ -163,7 +167,7 @@ body{margin:0}
 <div class="look">
 <div>
 <p class="mono" style="margin: 0;"><span class="num" style="font-size: 18px; color: var(--ink);">01</span> · Danny</p>
-<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">Rugby moulded knit and pleated double crotch culottes</h3>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(19px, 1.5vw, 24px); line-height: 1.2; font-weight: var(--dw);">Rugby moulded knit and pleated double crotch culottes</h3>
 <ul class="glist"><li>Grilon, Cotton and Merino Wool moulded, fully fashioned heart rugby raglan</li><li>Boiled wool and Grilon knit baker boy hat</li><li>Wool suiting pleated double-crotch culottes</li></ul>
 </div>
 <div class="c4">
@@ -177,7 +181,7 @@ body{margin:0}
 <div class="look">
 <div>
 <p class="mono" style="margin: 0;"><span class="num" style="font-size: 18px; color: var(--ink);">02</span> · Arjius</p>
-<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">Leather appliqué double breasted blazer and pleated clasp shorts</h3>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(19px, 1.5vw, 24px); line-height: 1.2; font-weight: var(--dw);">Leather appliqué double breasted blazer and pleated clasp shorts</h3>
 <ul class="glist"><li>Wool double-breasted funnel-neck blazer with leather and merino appliqué</li><li>Leather appliqué pleated shorts</li><li>Oversized check baker boy hat</li></ul>
 </div>
 <div class="c4">
@@ -191,7 +195,7 @@ body{margin:0}
 <div class="look">
 <div>
 <p class="mono" style="margin: 0;"><span class="num" style="font-size: 18px; color: var(--ink);">03</span> · Isolt</p>
-<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">School girl knit dress and check peplum semi-tailored jacket</h3>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(19px, 1.5vw, 24px); line-height: 1.2; font-weight: var(--dw);">School girl knit dress and check peplum semi-tailored jacket</h3>
 <ul class="glist"><li>Check wool peplum school jacket with external and internal pockets and a pleated merino and Grilon hemline</li><li>Cotton school dress with merino and Grilon pleats, worn with or without the jacket</li></ul>
 </div>
 <div class="c4">
@@ -205,7 +209,7 @@ body{margin:0}
 <div class="look">
 <div>
 <p class="mono" style="margin: 0;">Separate piece</p>
-<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.2; font-weight: var(--dw);">Orange striped knit</h3>
+<h3 class="disp" style="margin: 10px 0 0; font-size: clamp(19px, 1.5vw, 24px); line-height: 1.2; font-weight: var(--dw);">Orange striped knit</h3>
 <ul class="glist"><li>100% Merino Wool Striped School Jumper</li><li>Fully Fashioned on a 12 Gauge Dubied machine</li></ul>
 </div>
 <div class="c4">
@@ -290,9 +294,6 @@ body{margin:0}
 </nav>
 </main>
 
-<footer style="max-width: 1440px; margin: 64px auto 0; padding: 14px clamp(16px, 4vw, 48px) 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;">
-<span class="mono">Benjamin Farrelly · knitwear and textiles</span>
-</footer>
 
 <div class="hem" role="region" aria-label="Contact">
 <div class="hemrow"><button class="hemtab" type="button" data-contact-toggle aria-expanded="false">Contact ↑</button><a class="hemmail" href="mailto:benfarrelly03@gmail.com">benfarrelly03@gmail.com</a></div>
