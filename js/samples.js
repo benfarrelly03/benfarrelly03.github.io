@@ -54,7 +54,7 @@
   }
 
   function layout() {
-    var T = cols(), gap = 20, W = grid.clientWidth || 1184, colW = (W - (T - 1) * gap) / T;
+    var T = cols(), gap = T >= 12 ? 40 : T >= 6 ? 28 : 18, W = grid.clientWidth || 1184, colW = (W - (T - 1) * gap) / T;
     grid.style.gridTemplateColumns = 'repeat(' + T + ', minmax(0, 1fr))';
     grid.style.columnGap = gap + 'px';
     Array.prototype.forEach.call(grid.children, function (card, k) {
