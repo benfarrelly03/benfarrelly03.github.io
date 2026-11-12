@@ -3,7 +3,11 @@
 // Crops are non-destructive: each original image is positioned, scaled and rotated inside its frame.
 (function () {
   var S = window.SAMPLES || [];
-  var CATS = [{ id: 'st', name: 'Stripes' }, { id: 'rb', name: 'Ribbing' }, { id: 'ex', name: 'Experiments' }, { id: 'wk', name: 'Working samples' }];
+  var ALLCATS = [{ id: 'st', name: 'Stripes' }, { id: 'rb', name: 'Ribbing' }, { id: 'ex', name: 'Experiments' }, { id: 'wk', name: 'Working samples' }];
+  // Ribbing is hidden for now (matches the canvas, 12 Nov 2026). Its samples stay in samples-data.js;
+  // remove 'rb' from HIDE to bring the tab back.
+  var HIDE = ['rb'];
+  var CATS = ALLCATS.filter(function (c) { return HIDE.indexOf(c.id) < 0; });
   var tabsEl = document.getElementById('tabs');
   var grid = document.getElementById('kgrid');
   var title = document.getElementById('s-h');
@@ -11,7 +15,7 @@
   var lbFrame = document.getElementById('lb-frame');
   var tab = 'st', lb = -1, seq = [];
 
-  function catName(id) { for (var k = 0; k < CATS.length; k++) if (CATS[k].id === id) return CATS[k].name; return ''; }
+  function catName(id) { for (var k = 0; k < ALLCATS.length; k++) if (ALLCATS[k].id === id) return ALLCATS[k].name; return ''; }
   function seqOf(cat) { return S.filter(function (t) { return t.cat === cat; }); }
   function pad(i) { return (i < 9 ? '0' : '') + (i + 1); }
   function dims(t) { return (t.rot % 180) ? { w: t.H, h: t.W } : { w: t.W, h: t.H }; }
